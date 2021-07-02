@@ -25,7 +25,7 @@ public class BookSelectApp {
 			query += " select book_id, ";
 			query += " 		  title, ";
 			query += " 		  pubs, ";
-			query += " 		  pub_date, ";
+			query += " 		  to_char(b.pub_date,'yyyy-mm-dd') pd, ";
 			query += " 		  author_id ";
 			query += " from   book ";
 			
@@ -36,7 +36,7 @@ public class BookSelectApp {
 				int bookId=rs.getInt("book_id");
 				String title=rs.getString("title");
 				String pubs=rs.getString("pubs");
-				String pubsDate=rs.getString("pub_date");
+				String pubsDate=rs.getString("pd");
 				int authorId=rs.getInt("author_id");
 				
 				System.out.println(bookId+", "+title+", "+pubs+", "+pubsDate+", "+authorId);

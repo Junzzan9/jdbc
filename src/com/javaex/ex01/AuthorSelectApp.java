@@ -32,9 +32,15 @@ public class AuthorSelectApp {
 			rs=pstmt.executeQuery();
 			// 4.결과처리
 			while(rs.next()) {
+				/*   
 				int authorId=rs.getInt("author_id");
 				String authorName=rs.getString("author_name");
 				String authorDesc=rs.getString("author_desc");
+				*/
+				
+				int authorId=rs.getInt(1);
+				String authorName=rs.getString(2);
+				String authorDesc=rs.getString(3);
 				
 				System.out.println(authorId+", "+authorName+", "+authorDesc);
 			}
